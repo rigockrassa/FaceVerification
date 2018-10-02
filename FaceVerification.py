@@ -37,7 +37,7 @@ np.set_printoptions(threshold=np.nan)
 json_file = open('saveModel/model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
-FRmodel = model_from_json(loaded_model_json)
+FRmodel = model_from_json(str(loaded_model_json))
 # load weights into new model
 FRmodel.load_weights("saveModel/model.h5")
 print("Loaded model from disk")
